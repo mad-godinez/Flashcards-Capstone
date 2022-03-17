@@ -1,0 +1,8 @@
+How I get this project to run in my VSCode terminal
+> I use zsh 
+% `nvm use 16.13.0` 
+% npm start 
+
+The #BUG or #ERROR is in "./src/Layout/cards/StudyCards.js" (it is the StudyCards component)
+expected behavior: the react hook & async function loads the data from the local server before executing the rest of the function. 
+actual behavior: function crashes when the `return` statement tries to read from the `undefined` data before it is finished rendering. 
