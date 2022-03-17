@@ -1,8 +1,17 @@
-How I get this project to run in my VSCode terminal
-> I use zsh 
-% `nvm use 16.13.0` 
+# How I get this project to run in my VSCode terminal
+# Thinkful's included code requires an old version of npm which is why I do the following: 
+# I use zsh on mac
+
+% nvm use 16.13.0 
 % npm start 
 
+# Example Data is in root/data/db.json
+# Live Data via servers is on port 8080/decks & port 8080/cards 
+
 The #BUG or #ERROR is in "./src/Layout/cards/StudyCards.js" (it is the StudyCards component)
-expected behavior: the react hook & async function loads the data from the local server before executing the rest of the function. 
-actual behavior: function crashes when the `return` statement tries to read from the `undefined` data before it is finished rendering. 
+expected behavior: 
+  the react hook & async function loads the data from the local server before executing the rest of the function. 
+actual behavior: 
+  function crashes when the `return` statement tries to read from the `undefined` data before it is finished rendering. 
+  Note: return statements such as <p>card_array[0].front</p> break the component, 
+        but console.log(card_array[0].front) statements throughout the body of the component do not break it.
