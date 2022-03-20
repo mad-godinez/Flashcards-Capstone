@@ -1,59 +1,129 @@
-
-/******CREATE DECK SCREEN******/
-section{
-  /* border: 1px solid red; */
-  padding: 5px;
+/***** HOME SCREEN *****/
+.deck-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
+.deck-header h4{flex: 1}
+.deck-header p{flex: 1}
 form{
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
 }
 form input, textarea{
   margin-bottom: 15px;
-  /* border: 1px solid lightgray; */
   padding: 5px;
   border-radius: 5px;
 }
 form input::placeholder, textarea::placeholder{
   padding: 5px;
 }
-.btnGroup .btn-primary {
-  margin-left: 10px;
+.decklist-btns{
+  display: block;
 }
-
-/******SINGLE DECK SCREEN******/
+.decklist-btns .delete, .deck-heading-btns .delete{
+  margin-right: 10px;
+  float: right;
+}
+.deckcreate button{
+  margin-bottom: 15px !important;
+}
+/***** SHOW DECK SCREEN *****/
 .deckinfo{
-  /* border: 1px solid purple; */
   margin-bottom: 20px;
+  max-width: 90%;
 }
-.cardlist ul{
-  /* border: 1px solid blue;  */
+.cardlist, .deck-list {
   margin: 0;
+  padding: 0;
+  max-width: 90%;
 }
-.cardlist li{
+.cardlist li, .deck-list li{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-top: 0.5px solid lightgray;
+  border-bottom: 0.5px solid lightgray;
+  width: 100%;
+}
+.cardlist li:nth-child(1),
+.deck-list li:nth-child(1){
+  border: 1px solid lightgray;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.cardlist li:last-child,
+.deck-list li:last-child{
+  border: 1px solid lightgray;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.txtGroup{
   display: flex;
   flex-direction: row;
-  align-self: start;
-  /* border: 1px solid black; */
-  margin: 5px 0;
-  width: 100%;
-   padding: 5px;
+  margin-block-end: 0;
 }
-.cardFront, .cardBack{
-  align-content: center;
+.cardlist .cardFront{
   flex: 1;
-  /* border: 1px solid red; */
+  margin: 0 30px 5px 10px;
 }
-.cardBack .btnGroup{
-  /* background-color: lightgray; */
+.cardlist .cardBack{
   flex: 1;
-  text-align: end;
-  margin: 10px 0 0 0;
+  margin-bottom: 0;
 }
-button{
-  margin: 5px;
+.btnGroup{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-self: end;
+  margin-right: 20px;
+}
+.btnGroup button, button {
+  margin-right: 10px;
+  flex: 1;
 }
 li{
   list-style-type: none;
+}
+/***** STUDY CARDS CAROUSEL *****/
+.carousel-item{
+  height: 100%;
+  padding: 15px 20px;
+}
+.carousel-inner{
+  border: 1px solid silver;
+  border-radius: 3px;
+  /* padding: 0 5px 5px 5px; */
+}
+.carousel-item p{
+  margin: 15px 0;
+  position: static;
+}
+.carousel-item h4, .carousel-item button{
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+}
+.text-muted{
+  text-align: right;
+  float: right;
+}
+
+/***** BOOTSTRAP ICONS FOR BUTTONS (all pages/components) *****/
+.bi{
+  line-height: 1;
+  vertical-align: -0.125em;
+  font-family: bootstrap-icons !important;
+  display: inline-block;
+}
+
+li p{
+  color: darkslategrey;
+}
+svg{
+  pointer-events: none;
 }

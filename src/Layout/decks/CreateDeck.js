@@ -1,50 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { createDeck } from "../../utils/api/index";
-/*
-The Create Deck screen has the following features:
 
-The path to this screen should be /decks/new.
-There is a breadcrumb navigation bar with a link to home / followed by the text Create Deck (i.e., Home/Create Deck).
-A form is shown with the appropriate fields for creating a new deck.
-The name field is an <input> field of type text.
-The description field is a <textarea> field that can be multiple lines of text.
-If the user clicks Submit, the user is taken to the Deck screen.
-If the user clicks Cancel, the user is taken to the Home screen.
-*/
+import { createDeck } from "../../utils/api/index";
 
 // Allows the user to create a new deck.
-export default function CreateDeck(){
-  const initial = {
-    "name": "",
-    "description": ""
-  };
-  const [formData, setFormData] = useState({...initial});
+export default function CreateDeck({deckNum, deckList}){
+  const [formData, setFormData] = useState({});
+  useEffect(()=>{
+    const initial = {
+      "name": "",
+      "description": ""
+    };
+    setFormData(initial)
+  },[]);
+
   const changer = ({target}) => {
     setFormData({...formData, [target.name] : target.value});
   };
-  const [deckId, setDeckId] = useState(null);
-  let history = useHistory();
-  const submitter = (event) => {
-    async function postdata(deckId){
-      const response = await createDeck(formData);
-      const {id} = response;
-      setDeckId(id);
-    }
-    postdata(deckId);
-    setFormData(initial);
-  };
 
-  if(deckId){
-    const url = `/decks/${deckId}`;
-    history.push(url)
-  }
+  let history = useHistory();
+
+  const submitter = (event) => {
+    event.preventDefault();
+    createDeck(formData).then(result=>history.push(`/decks/${result.id}`));
+    return deckList.length++;
+  };
 
   return (
     <>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+          <li className="breadcrumb-item"><Link to="/"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+              className="bi bi-house-fill" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+            <path fillRule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+          </svg> {' '}Home </Link></li>
           <li className="breadcrumb-item active" aria-current="page">Create Deck</li>
         </ol>
       </nav>
