@@ -45,8 +45,13 @@ This project is designed to test your ability to work with rendering and state m
 ---
 ## Mockup Matching!
 At the start of this project, I was given some mockup UI images of what the final product *should* look like. I take great care & pride in my work to match these as closely as I can and am happy to share them with you, too. Feel free to browse the folders, here are just a couple of examples:
-<h4 align="center"> ↙️ Mockup versus My Product ↘️ </h4>
-<span><img width="500" height="auto" src="https://github.com/mad-godinez/Flashcards-Capstone/blob/5ba2a49ef57fb8893a9e5bdc3c593aab63595c64/Mockup_Matches/given_materials/home.png" alt="mockup homepage" align="left"><img width="450" height="auto"alt="mad product homepage" align="right" src="https://user-images.githubusercontent.com/93545744/159317386-efb95459-9efa-4127-8f4f-d48b437240cd.png">
-</span>
+
+ <h4 align="center"> ↙️ Mockup versus My Product ↘️ </h4>
+
 <br>
-<span><img width="500" height="auto" src="https://github.com/mad-godinez/Flashcards-Capstone/blob/5ba2a49ef57fb8893a9e5bdc3c593aab63595c64/Mockup_Matches/given_materials/deck.png" alt="mockup deck screen" align="left"><img width="400" height="auto" src="https://github.com/mad-godinez/Flashcards-Capstone/blob/5ba2a49ef57fb8893a9e5bdc3c593aab63595c64/Mockup_Matches/madgodinez_result/mg-deck-screen.png" alt="mad product deck screen" align="right"></span>
+<img width="400" height="auto" src="https://github.com/mad-godinez/Flashcards-Capstone/blob/5ba2a49ef57fb8893a9e5bdc3c593aab63595c64/Mockup_Matches/given_materials/deck.png" alt="mockup deck screen" align="left">
+           <img width="400" height="auto" alt="mad product deck screen" align="right" src="https://github.com/mad-godinez/Flashcards-Capstone/blob/5ba2a49ef57fb8893a9e5bdc3c593aab63595c64/Mockup_Matches/madgodinez_result/mg-deck-screen.png">
+
+    
+ <img width="400"  height="auto" src="https://github.com/mad-godinez/Flashcards-Capstone/blob/5ba2a49ef57fb8893a9e5bdc3c593aab63595c64/Mockup_Matches/given_materials/home.png" alt="mockup homepage" align="left">
+            <img width="400"  height="auto" alt="mad product homepage" align="right" src="https://user-images.githubusercontent.com/93545744/159317386-efb95459-9efa-4127-8f4f-d48b437240cd.png">
