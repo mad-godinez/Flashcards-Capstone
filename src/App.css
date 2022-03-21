@@ -127,3 +127,6 @@ li p{
 svg{
   pointer-events: none;
 }
+input, textarea {
+  border: 1px solid silver;
+}

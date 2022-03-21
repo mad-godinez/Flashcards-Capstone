@@ -47,7 +47,7 @@ export default function CreateDeck({deckNum, deckList}){
           <label>Description</label>
           <textarea type="text" name="description" placeholder="Brief description of the deck" rows="4" required
                     value={formData.description} onChange={changer} />
-          <div className="btnGroup">
+          <div className="createbtnGroup">
             <Link to="/">
               <button type="button" className="btn btn-secondary">Cancel</button>
             </Link>
