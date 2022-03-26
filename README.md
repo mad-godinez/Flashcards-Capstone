@@ -6,13 +6,47 @@
 ## About Me:
 - My name is Mad, you can think of it as "Maude" or "Mod" in your head, whichever works!
 - I'm currently enrolled in Thinkful's Fullstack Software Engineering course & having a really great time learning this material. I also earned my BA in Spanish Studies & Computer Science from Texas State University in the winter of 2021, so I was fortunate to have a good foundation of programming knowledge going into this course. 
-- This course is wrapping up at the end of April, 2022 (right around the corner!) so please feel free to reach out if you've got me in mind for a junior developer role! 
+- This course is wrapping up at the beginning of May, 2022 (right around the corner!) so please feel free to reach out if you've got me in mind for a junior developer role! 
 
 My [🌲 LinkTree🌲 ](https://linktr.ee/madgodinez) has the best ways to find me online, as well as my resume. 
 
 ## About this Project: Flashcard-O-Matic
 ### Project Description: 
 <p align="center">"A local school has decided to put together a flash card application, Flashcard-o-matic, to help their students study online. Teachers will use this application to create decks of flash cards for the subjects that they teach, and students will study the decks. The school needs you to build the application that the students and teachers will use."</p>
+
+### The Data:
+Below is an example of the data for a single study deck, represented by two arrays:  
+```
+data:   {
+          "decks": [
+            {
+              "id": 1,
+              "name": "Rendering in React",
+              "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+            }
+          ],
+          "cards": [
+            {
+              "id": 1,
+              "front": "Differentiate between Real DOM and Virtual DOM.",
+              "back": "Virtual DOM updates are faster but do not directly update the HTML.",
+              "deckId": 1
+            },
+            {
+              "id": 2,
+              "front": "How do you modify the state of a different React component?",
+              "back": "Not at all! State is visible to the component only.",
+              "deckId": 1
+            },
+            {
+              "id": 3,
+              "front": "How do you pass data 'down' to a React child component?",
+              "back": "As properties or props. ",
+              "deckId": 1
+            }
+          ]
+        }
+```
 
 ### Learning Objectives: 
 This project is designed to test your ability to work with rendering and state management using React & includes the following as prerequisite skills:
